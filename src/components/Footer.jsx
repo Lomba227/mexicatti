@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { motion, useInView } from 'framer-motion'
 import { Instagram, MessageCircle, ShoppingBag, ArrowUp } from 'lucide-react'
 import logo from '../assets/logo.png'
@@ -12,8 +12,8 @@ const navLinks = [
 
 const socials = [
   { icon: <Instagram size={18} />, label: 'Instagram', href: 'https://instagram.com/mexicatti', color: '#E1306C' },
-  { icon: <MessageCircle size={18} />, label: 'WhatsApp', href: 'https://wa.me/NUMERO_MEXICATTI', color: '#25D366' },
-  { icon: <ShoppingBag size={18} />, label: 'iFood', href: 'https://ifood.com.br/LINK_MEXICATTI', color: '#EA1D2C' },
+  { icon: <MessageCircle size={18} />, label: 'WhatsApp', href: 'https://api.whatsapp.com/send?phone=551935441420', color: '#25D366' },
+  { icon: <ShoppingBag size={18} />, label: 'iFood', href: 'https://www.ifood.com.br/delivery/araras-sp/mexicatti-sorvetes-jardim-campos-verdes/da40930c-0422-4d5b-978b-cc6335cf5a10', color: '#EA1D2C' },
 ]
 
 export default function Footer() {
@@ -218,3 +218,4 @@ export default function Footer() {
     </footer>
   )
 }
+

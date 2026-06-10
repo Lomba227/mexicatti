@@ -4,29 +4,29 @@ import { MapPin, Clock, ExternalLink } from 'lucide-react'
 
 const stores = [
   {
-    name: 'Loja Centro',
+    name: 'Loja Jardim Campos Verdes',
     number: '01',
-    address: 'Rua das Flores, 123 — Centro',
-    city: 'Araras/SP — CEP 13600-000',
+    address: 'Av. Fábio da Silva Prado, 1610 — Jardim Campos Verdes',
+    city: 'Araras/SP — CEP 13604-520',
     hours: 'Seg–Sex: 10h–22h · Sáb–Dom: 10h–23h',
-    maps: 'https://maps.google.com',
+    maps: 'https://www.google.com.br/maps/place/Mexicatti+Sorvetes/@-22.338526,-47.3692153,18.48z/data=!4m6!3m5!1s0x94c871b539bf79fb:0x7b14b569786a1a6a!8m2!3d-22.3386979!4d-47.3684238!16s%2Fg%2F11j34np2rm?coh=164777&entry=tt&shorturl=1',
     highlight: true,
   },
   {
-    name: 'Loja Jardim',
+    name: 'Loja Jardim das Flores',
     number: '02',
-    address: 'Av. Brasil, 456 — Jardim Paulista',
-    city: 'Araras/SP — CEP 13601-000',
+    address: 'Av. Loreto, 1104 — Jardim das Flores',
+    city: 'Araras/SP — CEP 13607-200',
     hours: 'Seg–Sex: 10h–22h · Sáb–Dom: 10h–23h',
-    maps: 'https://maps.google.com',
+    maps: 'https://www.google.com.br/maps/place/Mexicatti+Sorvetes/@-22.3606517,-47.3646614,17z/data=!3m1!4b1!4m6!3m5!1s0x94c871c983af189f:0xac7c69c465a44c88!8m2!3d-22.3606517!4d-47.3646614!16s%2Fg%2F11sh1ymfft?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D',
   },
   {
-    name: 'Loja Norte',
+    name: 'Loja Bosque de Versalles',
     number: '03',
-    address: 'Rua do Comércio, 789 — Bairro Norte',
-    city: 'Araras/SP — CEP 13602-000',
-    hours: 'Ter–Dom: 11h–22h · Segunda: Fechado',
-    maps: 'https://maps.google.com',
+    address: 'Rua José Antônio Cressoni, 226 — Res. Bosque de Versalles',
+    city: 'Araras/SP — CEP 13609-378',
+    hours: 'Seg–Sex: 10h–22h · Sáb–Dom: 10h–23h',
+    maps: 'https://www.google.com/maps/place/Mexicatti+Sorvetes/@-22.3809951,-47.3813842,17z/data=!3m1!4b1!4m6!3m5!1s0x94c8773ed63294e1:0xca3a6c891aad5494!8m2!3d-22.3809951!4d-47.3813842!16s%2Fg%2F11c2k2rln1?entry=ttu&g_ep=EgoyMDI2MDYwMy4xIKXMDSoASAFQAw%3D%3D',
   },
 ]
 

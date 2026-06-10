@@ -32,8 +32,8 @@ function AnimatedCounter({ to, suffix = '', prefix = '' }) {
 
 const stats = [
   { counter: 100, suffix: '+', label: 'Sabores únicos', desc: 'de sorvete, picolé, paleta e açaí' },
-  { counter: 3,   suffix: '',  label: 'Lojas em Araras', desc: 'Centro, Jardim e Norte' },
-  { counter: 15,  suffix: '+', label: 'Anos de sabor', desc: 'fabricação própria desde o início' },
+  { counter: 3,   suffix: '',  label: 'Lojas em Araras', desc: 'Campos Verdes, Loreto e Copacabana' },
+  { counter: 5,   suffix: '+', label: 'Anos de sabor', desc: 'fabricação própria desde o início' },
 ]
 
 function ProductImageStack() {
