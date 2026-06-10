@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react'
-import { motion, AnimatePresence, useInView } from 'framer-motion'
+import { motion, AnimatePresence, useInView, useMotionValue, useMotionTemplate } from 'framer-motion'
 import { Info, Tag } from 'lucide-react'
 import { categories } from '../data/products'
 import picole2 from '../assets/picole2.png'
@@ -100,14 +100,30 @@ function PriceRow({ priceWholesale, priceRetail, categoryColor }) {
 
 function ProductCard({ line, index, categoryColor }) {
   const [expanded, setExpanded] = useState(false)
+  const cardRef = useRef(null)
+
+  // Spotlight effect (Aceternity / 21st.dev pattern)
+  const mouseX = useMotionValue(0)
+  const mouseY = useMotionValue(0)
+  const spotlightBg = useMotionTemplate`radial-gradient(220px circle at ${mouseX}px ${mouseY}px, ${categoryColor}15, transparent 80%)`
+
+  const handleMouseMove = (e) => {
+    const rect = cardRef.current?.getBoundingClientRect()
+    if (rect) {
+      mouseX.set(e.clientX - rect.left)
+      mouseY.set(e.clientY - rect.top)
+    }
+  }
 
   return (
     <motion.div
+      ref={cardRef}
+      onMouseMove={handleMouseMove}
       initial={{ opacity: 0, y: 32 }}
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, y: 16, scale: 0.97 }}
       transition={{ delay: index * 0.07, type: 'spring', stiffness: 180, damping: 22 }}
-      whileHover={{ y: -4, boxShadow: '0 16px 40px rgba(61,31,10,0.12)' }}
+      whileHover={{ y: -5, boxShadow: '0 20px 48px rgba(61,31,10,0.13)' }}
       layout
       style={{
         background: '#fff',
@@ -121,16 +137,28 @@ function ProductCard({ line, index, categoryColor }) {
       }}
       onClick={() => setExpanded(!expanded)}
     >
+      {/* Spotlight overlay */}
+      <motion.div
+        style={{
+          position: 'absolute', inset: 0,
+          background: spotlightBg,
+          borderRadius: 20, pointerEvents: 'none', zIndex: 0,
+          opacity: 0,
+        }}
+        whileHover={{ opacity: 1 }}
+        transition={{ duration: 0.2 }}
+      />
       {/* Top accent bar */}
       <div style={{
         position: 'absolute',
-        top: 0,
-        left: 0,
-        right: 0,
-        height: 4,
+        top: 0, left: 0, right: 0, height: 4,
         background: `linear-gradient(90deg, ${categoryColor}, ${categoryColor}66)`,
         borderRadius: '20px 20px 0 0',
+        zIndex: 1,
       }} />
+
+      {/* All content above spotlight */}
+      <div style={{ position: 'relative', zIndex: 1 }}>
 
       {/* Header row: name + badge */}
       <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', gap: 12, marginBottom: 4 }}>
@@ -237,6 +265,7 @@ function ProductCard({ line, index, categoryColor }) {
           </motion.div>
         )}
       </AnimatePresence>
+      </div>{/* end content z-index wrapper */}
     </motion.div>
   )
 }
