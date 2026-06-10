@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { MessageCircle, ShoppingBag, MapPin, Star } from 'lucide-react'
 import logo from '../assets/logo.png'
@@ -47,7 +47,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Breathing orange glow — top right */}
+      {/* Breathing orange glow â€” top right */}
       <motion.div
         aria-hidden="true"
         animate={{ scale: [1, 1.18, 1], opacity: [0.07, 0.14, 0.07] }}
@@ -61,7 +61,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Breathing gold glow — bottom left */}
+      {/* Breathing gold glow â€” bottom left */}
       <motion.div
         aria-hidden="true"
         animate={{ scale: [1, 1.22, 1], opacity: [0.04, 0.1, 0.04] }}
@@ -110,7 +110,7 @@ export default function Hero() {
         minHeight: '100dvh',
       }}>
 
-        {/* ── LEFT: text ── */}
+        {/* â”€â”€ LEFT: text â”€â”€ */}
         <motion.div
           style={{ x: isDesktop ? textX : 0, opacity: isDesktop ? textOp : 1 }}
         >
@@ -144,7 +144,7 @@ export default function Hero() {
             </div>
           </motion.div>
 
-          {/* Headline — line-by-line blur reveal (21st.dev pattern) */}
+          {/* Headline â€” line-by-line blur reveal (21st.dev pattern) */}
           <h1
             style={{
               fontFamily: "'Playfair Display', serif",
@@ -203,7 +203,7 @@ export default function Hero() {
             style={{ display: 'flex', gap: 12, flexWrap: 'wrap', marginBottom: 52 }}
           >
             <motion.a
-              href="https://wa.me/NUMERO_MEXICATTI"
+              href="https://api.whatsapp.com/send?phone=551935441420"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Pedir no WhatsApp"
@@ -222,7 +222,7 @@ export default function Hero() {
               Pedir no WhatsApp
             </motion.a>
             <motion.a
-              href="https://ifood.com.br/LINK_MEXICATTI"
+              href="https://www.ifood.com.br/delivery/araras-sp/mexicatti-sorvetes-jardim-campos-verdes/da40930c-0422-4d5b-978b-cc6335cf5a10"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Ver no iFood"
@@ -267,7 +267,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* ── RIGHT: layered product images (desktop) ── */}
+        {/* â”€â”€ RIGHT: layered product images (desktop) â”€â”€ */}
         {isDesktop && (
           <div style={{ position: 'relative', height: 600 }}>
 
@@ -283,7 +283,7 @@ export default function Hero() {
               }}
             />
 
-            {/* Back card — pote6, top-right */}
+            {/* Back card â€” pote6, top-right */}
             <motion.div
               style={{ y: float2Y, position: 'absolute', top: '2%', right: '-2%', zIndex: 1 }}
               initial={{ opacity: 0, x: 50, scale: 0.88 }}
@@ -314,7 +314,7 @@ export default function Hero() {
               </motion.div>
             </motion.div>
 
-            {/* Main image — pote5, clip-path reveal + parallax */}
+            {/* Main image â€” pote5, clip-path reveal + parallax */}
             <motion.div
               style={{ y: imgY, scale: imgScale, position: 'absolute', top: '6%', left: '8%', zIndex: 2 }}
               initial={{ opacity: 0, clipPath: 'inset(4% 38% 4% 38% round 24px)' }}
@@ -359,7 +359,7 @@ export default function Hero() {
               </motion.div>
             </motion.div>
 
-            {/* Front card — picole2, bottom-right */}
+            {/* Front card â€” picole2, bottom-right */}
             <motion.div
               style={{ y: float1Y, position: 'absolute', bottom: '4%', right: '5%', zIndex: 3 }}
               initial={{ opacity: 0, x: 36, scale: 0.85 }}
@@ -392,7 +392,7 @@ export default function Hero() {
           </div>
         )}
 
-        {/* ── MOBILE: single main image ── */}
+        {/* â”€â”€ MOBILE: single main image â”€â”€ */}
         {!isDesktop && (
           <div style={{ display: 'flex', justifyContent: 'center' }}>
             <motion.div
@@ -462,3 +462,5 @@ export default function Hero() {
     </section>
   )
 }
+
+

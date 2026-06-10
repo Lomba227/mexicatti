@@ -1,4 +1,4 @@
-import { useRef } from 'react'
+﻿import { useRef } from 'react'
 import { motion, useInView, useScroll, useTransform } from 'framer-motion'
 import { MessageCircle, ShoppingBag, Zap } from 'lucide-react'
 import pote5 from '../assets/pote5.png'
@@ -117,7 +117,7 @@ export default function CTA() {
 
           <div style={{ display: 'flex', gap: 14, flexWrap: 'wrap' }}>
             <motion.a
-              href="https://wa.me/NUMERO_MEXICATTI"
+              href="https://api.whatsapp.com/send?phone=551935441420"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -142,7 +142,7 @@ export default function CTA() {
             </motion.a>
 
             <motion.a
-              href="https://ifood.com.br/LINK_MEXICATTI"
+              href="https://www.ifood.com.br/delivery/araras-sp/mexicatti-sorvetes-jardim-campos-verdes/da40930c-0422-4d5b-978b-cc6335cf5a10"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -169,7 +169,7 @@ export default function CTA() {
           </div>
         </motion.div>
 
-        {/* Product image — dramatic right side */}
+        {/* Product image â€” dramatic right side */}
         <motion.div
           style={{ y: imgY, rotate: imgRotate }}
           initial={{ opacity: 0, scale: 0.8, x: 40 }}
@@ -228,7 +228,7 @@ export default function CTA() {
                 zIndex: 2,
               }}
             >
-              🍦 Sorvete Artesanal
+              ðŸ¦ Sorvete Artesanal
             </motion.div>
           </motion.div>
         </motion.div>
@@ -236,3 +236,5 @@ export default function CTA() {
     </section>
   )
 }
+
+

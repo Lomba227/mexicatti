@@ -1,4 +1,4 @@
-import { useState } from 'react'
+﻿import { useState } from 'react'
 import { motion, AnimatePresence, useScroll, useMotionValueEvent } from 'framer-motion'
 import { MessageCircle } from 'lucide-react'
 import logo from '../assets/logo.png'
@@ -24,7 +24,7 @@ export default function Navbar() {
 
   return (
     <>
-      {/* ── Top bar (transparent / dark glass) ── */}
+      {/* â”€â”€ Top bar (transparent / dark glass) â”€â”€ */}
       <AnimatePresence>
         {!pillVisible && (
           <motion.header
@@ -66,7 +66,7 @@ export default function Navbar() {
             </motion.a>
 
             <motion.a
-              href="https://wa.me/NUMERO_MEXICATTI"
+              href="https://api.whatsapp.com/send?phone=551935441420"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Pedir pelo WhatsApp"
@@ -89,7 +89,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* ── Floating pill (desktop) ── */}
+      {/* â”€â”€ Floating pill (desktop) â”€â”€ */}
       <AnimatePresence>
         {pillVisible && isDesktop && (
           <motion.nav
@@ -149,7 +149,7 @@ export default function Navbar() {
             <div style={{ width: 1, height: 18, background: 'rgba(255,255,255,0.1)', marginLeft: 4 }} />
 
             <motion.a
-              href="https://wa.me/NUMERO_MEXICATTI"
+              href="https://api.whatsapp.com/send?phone=551935441420"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="Pedir pelo WhatsApp"
@@ -172,7 +172,7 @@ export default function Navbar() {
         )}
       </AnimatePresence>
 
-      {/* ── Floating bar (mobile) ── */}
+      {/* â”€â”€ Floating bar (mobile) â”€â”€ */}
       <AnimatePresence>
         {pillVisible && !isDesktop && (
           <motion.nav
@@ -197,7 +197,7 @@ export default function Navbar() {
           >
             <img src={logo} alt="Mexicatti" style={{ height: 30, width: 30, objectFit: 'contain', background: '#fff', borderRadius: '50%', padding: 2 }} />
             <motion.a
-              href="https://wa.me/NUMERO_MEXICATTI"
+              href="https://api.whatsapp.com/send?phone=551935441420"
               target="_blank"
               rel="noopener noreferrer"
               style={{
@@ -217,3 +217,4 @@ export default function Navbar() {
     </>
   )
 }
+
