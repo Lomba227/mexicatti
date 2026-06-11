@@ -2,23 +2,25 @@ import { useState, useRef } from 'react'
 import { motion, AnimatePresence, useInView, useMotionValue, useMotionTemplate } from 'framer-motion'
 import { Info, Tag } from 'lucide-react'
 import { categories } from '../data/products'
-import picole2 from '../assets/picole2.png'
-import paleta1 from '../assets/paleta1.png'
-import pote3 from '../assets/pote3.png'
-import pote4 from '../assets/pote4.png'
 import pote5 from '../assets/pote5.png'
-import pote6 from '../assets/pote6.png'
+import pote4 from '../assets/pote4.png'
 import pote7 from '../assets/pote7.png'
+import pote3 from '../assets/pote3.png'
+import picolesPremium from '../assets/picoles-premium.png'
+import paletaPistacheCrock from '../assets/paleta-pistache-crock.jpg'
+import paletaMorangoLeite from '../assets/paleta-morango-com-leite.jpg'
+import pote1LRafaello from '../assets/pote-1L-rafaello.jpg'
+import pote1LMousse from '../assets/pote-1L-mousse-maracuja.jpg'
 
 const categoryImages = {
-  picoles: picole2,   // picolé cremoso — foto mais limpa
-  sundaes: pote5,     // taça waffle remete a sundae
-  potes2l: pote7,     // balde grande — escala família
-  potes250: pote3,    // dose individual em copo
-  paletas120: paleta1,
-  paletas72: paleta1,
-  potes1l: pote6,     // pote de vidro premium
-  acai: pote4,        // cor escura de açaí
+  picoles: picolesPremium,      // linha premium — visual impactante
+  sundaes: pote5,               // sorvete cremoso remete a sundae
+  potes2l: pote7,               // pote grande — escala família
+  potes250: pote1LMousse,       // mousse de maracujá — sabor disponível em 250mL
+  paletas120: paletaPistacheCrock, // paleta premium 120g mais icônica
+  paletas72: paletaMorangoLeite,   // paleta 72g morango com leite
+  potes1l: pote1LRafaello,      // pote 1L rafaello — premium de destaque
+  acai: pote4,                  // cor escura remete ao açaí
 }
 
 function FlavorBadge({ flavor, index }) {

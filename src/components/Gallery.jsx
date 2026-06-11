@@ -1,27 +1,45 @@
 import { useRef, useEffect, useState, useCallback } from 'react'
 import { motion, useInView, useMotionValue, animate } from 'framer-motion'
-import picole1 from '../assets/picole1.png'
-import picole2 from '../assets/picole2.png'
-import paleta1 from '../assets/paleta1.png'
-import pote1 from '../assets/pote1.png'
-import pote2 from '../assets/pote2.png'
-import pote3 from '../assets/pote3.png'
-import pote4 from '../assets/pote4.png'
 import pote5 from '../assets/pote5.png'
-import pote6 from '../assets/pote6.png'
-import pote7 from '../assets/pote7.png'
+import pote4 from '../assets/pote4.png'
+import paleta1 from '../assets/paleta1.PNG'
+import paleta2 from '../assets/paleta2.PNG'
+import paleta3 from '../assets/paleta3.PNG'
+import paleta4 from '../assets/paleta4.PNG'
+import paletaGianduia from '../assets/paleta-gianduia.jpg'
+import paletaMorangoLeite from '../assets/paleta-morango-com-leite.jpg'
+import paletaPistacheCrock from '../assets/paleta-pistache-crock.jpg'
+import paletaRafaello from '../assets/paleta-rafaello.jpg'
+import picoleCocoQueimado from '../assets/picole-coco-queimado.jpg'
+import picoleLeitinho from '../assets/picole-leitinho.jpg'
+import picolesPremium from '../assets/picoles-premium.png'
+import pote1LCharge from '../assets/pote-1L-charge.jpg'
+import pote1LMenta from '../assets/pote-1L-menta-trufada.jpg'
+import pote1LMousse from '../assets/pote-1L-mousse-maracuja.jpg'
+import pote1LRafaello from '../assets/pote-1L-rafaello.jpg'
+import potePistache from '../assets/pote-pistache.jpg'
+import sensacao from '../assets/sensação.png'
 
 const images = [
-  { src: pote5,   label: 'Maracujá',          sub: 'Sorvete Artesanal' },
-  { src: picole2, label: 'Picolé Cremoso',     sub: 'Linha Especial' },
-  { src: pote6,   label: 'Pistache',           sub: 'Linha Premium' },
-  { src: pote3,   label: 'Creme',              sub: 'Sorvete Artesanal' },
-  { src: pote4,   label: 'Açaí',               sub: 'Linha Açaí' },
-  { src: pote7,   label: 'Chocolate',          sub: 'Pote Família' },
-  { src: picole1, label: 'Picolé Coco',        sub: 'Linha Leite' },
-  { src: paleta1, label: 'Paleta Coco',        sub: 'Paleta 120g' },
-  { src: pote2,   label: 'Sorvete Família',    sub: 'Pote 2L' },
-  { src: pote1,   label: 'Chocolate Swirl',    sub: 'Linha Premium' },
+  { src: pote5,             label: 'Sorvete Artesanal',   sub: 'Fabricação Própria' },
+  { src: paletaGianduia,    label: 'Gianduia',            sub: 'Paleta Premium 120g' },
+  { src: picolesPremium,    label: 'Linha Premium',       sub: 'Picolés' },
+  { src: pote1LRafaello,    label: 'Rafaello',            sub: 'Pote 1L Premium' },
+  { src: paleta2,           label: 'Paleta Mexicana',     sub: 'Linha Frutada' },
+  { src: picoleCocoQueimado,label: 'Coco Queimado',       sub: 'Linha Leite' },
+  { src: potePistache,      label: 'Pistache',            sub: 'Pote Premium' },
+  { src: paletaPistacheCrock,label: 'Pistache Crock',     sub: 'Paleta Premium 120g' },
+  { src: pote4,             label: 'Açaí',                sub: 'Linha Açaí' },
+  { src: picoleLeitinho,    label: 'Leitinho',            sub: 'Linha Leite' },
+  { src: pote1LMousse,      label: 'Mousse de Maracujá',  sub: 'Pote 1L Especial' },
+  { src: paletaRafaello,    label: 'Rafaello',            sub: 'Paleta Especial 120g' },
+  { src: pote1LCharge,      label: 'Charge',              sub: 'Pote 1L Premium' },
+  { src: paleta3,           label: 'Paleta Cremosa',      sub: 'Paleta 120g' },
+  { src: sensacao,          label: 'Sensação',            sub: 'Pote 1L Premium' },
+  { src: paletaMorangoLeite,label: 'Morango com Leite',   sub: 'Paleta 72g' },
+  { src: pote1LMenta,       label: 'Menta Trufada',       sub: 'Pote 1L Especial' },
+  { src: paleta4,           label: 'Paleta Artesanal',    sub: 'Paleta 120g' },
+  { src: paleta1,           label: 'Paleta Coco',         sub: 'Paleta 120g' },
 ]
 
 // Duplicate for seamless loop
