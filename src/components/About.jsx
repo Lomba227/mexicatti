@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react'
 import { motion, useInView, useScroll, useTransform, useMotionValue, animate } from 'framer-motion'
-import pote5 from '../assets/pote5.png'
-import pote6 from '../assets/pote6.png'
+import pote1LRafaello from '../assets/pote-1L-rafaello.jpg'
+import paletaPistacheCrock from '../assets/paleta-pistache-crock.jpg'
 import { useIsDesktop } from '../hooks/useIsDesktop'
 
 // ── Animated counter (21st.dev pattern) ──
@@ -62,7 +62,7 @@ function ProductImageStack() {
         }}
       />
 
-      {/* Back card — pote6 */}
+      {/* Back card — paleta pistache crock */}
       <motion.div
         style={{ position: 'absolute', top: '8%', right: '0%', y: y2, rotate: rotate2, zIndex: 1 }}
         initial={{ opacity: 0, x: 40, scale: 0.9 }}
@@ -77,14 +77,14 @@ function ProductImageStack() {
           boxShadow: '0 20px 60px rgba(61,31,10,0.18)',
           border: '1px solid rgba(61,31,10,0.07)',
         }}>
-          <img src={pote6} alt="Sorvete de pistache Mexicatti" loading="lazy" style={{ width: 240, height: 240, objectFit: 'cover', borderRadius: 20, display: 'block' }} />
+          <img src={paletaPistacheCrock} alt="Paleta Pistache Crock Premium Mexicatti" loading="lazy" style={{ width: 240, height: 240, objectFit: 'cover', borderRadius: 20, display: 'block' }} />
           <div style={{ padding: '10px 8px 4px', fontSize: 11, fontWeight: 700, color: '#C49A2A', textAlign: 'center', letterSpacing: '1.5px', textTransform: 'uppercase' }}>
-            Linha Premium
+            Paleta Premium
           </div>
         </div>
       </motion.div>
 
-      {/* Front card — pote5 */}
+      {/* Front card — pote 1L rafaello */}
       <motion.div
         style={{ position: 'absolute', bottom: '5%', left: '0%', y: y1, rotate: rotate1, zIndex: 2 }}
         initial={{ opacity: 0, x: -40, scale: 0.9 }}
@@ -99,7 +99,7 @@ function ProductImageStack() {
           boxShadow: '0 24px 64px rgba(61,31,10,0.22)',
           border: '2px solid rgba(232,104,26,0.18)',
         }}>
-          <img src={pote5} alt="Sorvete de maracujá Mexicatti" loading="lazy" style={{ width: 220, height: 220, objectFit: 'cover', borderRadius: 20, display: 'block' }} />
+          <img src={pote1LRafaello} alt="Pote 1L Rafaello Premium Mexicatti" loading="lazy" style={{ width: 220, height: 220, objectFit: 'cover', borderRadius: 20, display: 'block' }} />
           <div style={{ padding: '10px 8px 4px', textAlign: 'center' }}>
             <span style={{
               display: 'inline-block',
@@ -107,7 +107,7 @@ function ProductImageStack() {
               color: '#fff', borderRadius: 100, padding: '4px 14px',
               fontSize: 11, fontWeight: 700, letterSpacing: '0.5px',
             }}>
-              Sorvete Artesanal
+              Pote 1L Premium
             </span>
           </div>
         </div>
